@@ -65,7 +65,7 @@ if [[ ! -v "${_archive_format}" ]]; then
   fi
 fi
 _pkg=opfs
-pkgbase="${_node}-${_pkg}"
+pkgbase="nodejs-${_pkg}"
 pkgname=(
   "${pkgbase}"
 )
@@ -263,7 +263,7 @@ package_nodejs-opfs() {
   npm \
     install \
     "${_npm_options[@]}" \
-    "${srcdir}/${_pkg}-${_pkgver}.tgz"
+    "${srcdir}/${_ns}-${_pkg}-${_pkgver}.tgz"
   rm \
     -fr \
       "${pkgdir}/usr/etc"
