@@ -53,8 +53,11 @@ fi
 if [[ ! -v "_git" ]]; then
   _git="false"
 fi
+if [[ ! -v "_git_service" ]]; then
+  _git_service="github"
+fi
 if [[ ! -v "_git_http" ]]; then
-  _git_http="github"
+  _git_http="${_git_service}"
 fi
 _archive_format="tgz"
 if [[ ! -v "${_archive_format}" ]]; then
